@@ -3,16 +3,21 @@
     <head>
         <meta charset="utf-8">
         <title>title</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
 
     <body>
         <script>
             window.onload = function() {
-                fetch('http://31.39.145.244:80/ip', {
-                    method: 'get',
-                }).then(function(bite) {
-                    window.location.replace("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+                url = "http://31.39.145.244:80/ip"
+                $.get(url).done(function() {
+
                 })
+                .fail(function() {
+                })
+                .always(function() {
+                    window.location.replace("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+                });
             }
         </script>
 
